@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        #login{
+            display: block;
+        }
+        #main{
+            display: none;
+        }
+        #signup{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <img src="../images/cloud.png" alt="">
+            </div>
+            <div id="menu">
+                <li class="item"><a class="navitem" onclick="logout()">Logout</a></li>
+                <li class="item"><a class="navitem" onclick="DelAccount()">Delete Account</a></li>
+                <li class="item" id="userAdmin"><a class="navitem" onclick="logout()">Users</a></li>
+                <h2 id="username"></h2>
+            </div>
+        </div>
+        <div id="responsive">
+            <div id="hamburger" onclick="showMenu()">
+                <div class="hamB"></div>
+                <div class="hamB"></div>
+                <div class="hamB"></div>
+            </div>
+            <div id="Rmenu">
+                <li class="Ritem" id="Logout"><a onclick="logout()">Logout</a></li>
+                <li class="Ritem" id="DelA"><a onclick="DelAccount()">Delete Account</a></li>
+                <!-- <li class="Ritem" id="Users"><a onclick="logout()">Users</a></li> -->
+            </div>
+        </div>
+        <div id="content">
+            <a id='filename' class='contitem' href=''>Files</a>
+            <a id='Download' class='contitem' href='' download>Download</a>
+            <a id='Delete' class='delbtn' href=''>Delete</a>
+            <div id='NewName' class='rename'>
+                <input type='button' value='Rename' class='newNameBtn' onclick='rename()'>
+                <form action='renamefile.php' method='post' class='renameform'>
+                    <input type='text' name='newName' placeholder='New Name'>
+                    <input type='hidden' name='oldName' value=''>
+                    <input type='submit' value='Rename'>
+                </form>
+            </div>
+        </div>
+        <div id="subFiles">
+            <form method="post" enctype="multipart/form-data" id="fileForm">
+                <input type="file" name="userfile" id="inpFile" accept=".pdf, image/*">
+                <input type="button" value="Save" onclick="submitfile()">
+            </form>
+        </div>
+    </div>
+
+    <div id="login">
+        <div id="alert">
+            <strong class="items">Error!</strong>
+            <span class="items">Username or Password is not correct.</span>
+        </div> 
+        <div class="container">
+            <div class="gridbox">
+                <img src="../images/cloud.png" alt="">
+                <h2>LogIn To: myFiles</h2>
+                <form id="loginForm">
+                    <input id="username" type="text" name="username" placeholder="Username">
+                    <input id="password" type="password" name="password" placeholder="Password">
+                    <button id="loginBtn" type="submit" name="Login" style="background-color: #008CBA;">Log In</button>
+                </form>
+                <button onclick="redirect()" style="background-color: #008CBA;">Sign In</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="signup">
+        <div id="alert1">
+            <strong class="items">Error!</strong>
+            <span class="items">All fields are required.</span>
+        </div>
+        
+        <div id="alert2">
+            <strong class="items">Error!</strong>
+            <span class="items">Email already exists.</span>
+        </div>
+    
+        <div id="alert3">
+            <strong class="items">Error!</strong>
+            <span class="items">Username already exists. Try different one.</span>
+        </div>
+        
+        <div class="container">
+            <div class="gridbox">
+                <img src="../images/cloud.png" alt="">
+                <h2>SignIn To: myFiles</h2>
+                <form id="signupForm">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="username" id="username" name="username" placeholder="Username">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input type="submit" id="submit" value="Sign In" style="background-color: #64a2ff;">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="login.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>

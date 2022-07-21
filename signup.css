@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.container {
+    display: flex;
+    /* width: 100vw; */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridbox {
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    margin: 5px;
+    text-align: center;
+}
+
+input {
+    display: block;
+    font-size: 1.13em;
+    width: 90%;
+    margin: 5px auto 5px auto;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 90px;
+    font-size: 17px;
+    /* background-color: #6371f3; */
+    color: darkblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Alert */
+
+#alert1,
+#alert2,
+#alert3 {
+    position: absolute;
+    width: 100vw;
+    font-family: system-ui;
+    background-color: #f7b8ad;
+    /* display: flex; */
+    display: none;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+    animation-name: alert;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes alert {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 40px;
+    }
+}
+
+@keyframes alert1 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+@keyframes alert2 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+@keyframes alert3 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.items {
+    margin: 7px;
+}

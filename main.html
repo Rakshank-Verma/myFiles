@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="../images/cloud.png" alt="">
+        </div>
+        <div id="menu">
+            <li class="item"><a class="navitem" onclick="logout()">Logout</a></li>
+            <li class="item"><a class="navitem" onclick="DelAccount()">Delete Account</a></li>
+            <li class="item" id="userAdmin"><a class="navitem" onclick="logout()">Users</a></li>
+            <h2 id="username"></h2>
+        </div>
+    </div>
+    <div id="responsive">
+        <div id="hamburger" onclick="showMenu()">
+            <div class="hamB"></div>
+            <div class="hamB"></div>
+            <div class="hamB"></div>
+        </div>
+        <div id="Rmenu">
+            <li class="Ritem" id="Logout"><a onclick="logout()">Logout</a></li>
+            <li class="Ritem" id="DelA"><a onclick="DelAccount()">Delete Account</a></li>
+            <!-- <li class="Ritem" id="Users"><a onclick="logout()">Users</a></li> -->
+        </div>
+    </div>
+    <div id="content">
+        <a id='filename' class='contitem' href=''>Files</a>
+        <a id='Download' class='contitem' href='' download>Download</a>
+        <a id='Delete' class='delbtn' href=''>Delete</a>
+        <div id='NewName' class='rename'>
+            <input type='button' value='Rename' class='newNameBtn' onclick='rename()'>
+            <form action='renamefile.php' method='post' class='renameform'>
+                <input type='text' name='newName' placeholder='New Name'>
+                <input type='hidden' name='oldName' value=''>
+                <input type='submit' value='Rename'>
+            </form>
+        </div>
+    </div>
+    <div id="subFiles">
+        <form method="post" enctype="multipart/form-data" id="fileForm">
+            <input type="file" name="userfile" id="inpFile" accept=".pdf, image/*">
+            <input type="button" value="Save" onclick="submitfile()">
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

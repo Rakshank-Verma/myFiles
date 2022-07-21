@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myFiles | Signup</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="http://localhost/PHP/Files_on_cloud/myFiles/signup.css">
+</head>
+
+<body>
+    <div id="alert1">
+        <strong class="items">Error!</strong>
+        <span class="items">All fields are required.</span>
+    </div>
+    
+    <div id="alert2">
+        <strong class="items">Error!</strong>
+        <span class="items">Email already exists.</span>
+    </div>
+
+    <div id="alert3">
+        <strong class="items">Error!</strong>
+        <span class="items">Username already exists. Try different one.</span>
+    </div>
+    
+    <div class="container">
+        <div class="gridbox">
+            <img src="../images/cloud.png" alt="">
+            <h2>SignIn To: myFiles</h2>
+            <form id="signupForm">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="username" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="submit" id="submit" value="Sign In" style="background-color: #64a2ff;">
+            </form>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+
+</html>
