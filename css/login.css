@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* width: 100vw; */
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridbox {
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+
+img#logIn {
+    width: 100%;
+}
+
+h2 {
+    margin: 5px;
+    text-align: center;
+}
+
+input#loginPassword,#loginUsername {
+    display: block;
+    font-size: 1.13em;
+    width: 93%;
+    margin: 5px auto 5px auto;
+    text-align: center;
+}
+
+button#signBtn,#loginBtn {
+    display: block;
+    margin: 5px auto 5px auto;
+    width: 96%;
+    font-size: 17px;
+    background-color: #008CBA;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#alert {
+    position: absolute;
+    width: 100vw;
+    font-family: system-ui;
+    background-color: #f7b8ad;
+    display: none;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+    animation-name: alert;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes alert{
+    from{
+        height: 0px;
+    }
+    to{
+        height: 40px;
+    }
+}
+@keyframes alert2{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.items{
+    margin: 7px;
+}

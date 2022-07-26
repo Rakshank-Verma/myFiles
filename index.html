@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+    <title></title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <img id="navImg" src="images/cloud.png" alt="">
+            </div>
+            <div id="menu">
+                <li class="item"><a class="navitem" onclick="logout()">Logout</a></li>
+                <li class="item"><a class="navitem" onclick="DelAccount()">Delete Account</a></li>
+                <!-- <li class="item" id="userAdmin"><a class="navitem" onclick="logout()">Users</a></li> -->
+                <h2 id="username"></h2>
+            </div>
+        </div>
+        <div id="responsive">
+            <div id="hammenu-username">
+                <div id="hamburger" onclick="showMenu()">
+                    <div class="hamB"></div>
+                    <div class="hamB"></div>
+                    <div class="hamB"></div>
+                </div>
+                <div id="usernameInNav">username</div>
+            </div>
+            <div id="Rmenu">
+                <li class="Ritem" id="Logout"><a onclick="logout()">Logout</a></li>
+                <li class="Ritem" id="DelA"><a onclick="DelAccount()">Delete Account</a></li>
+            </div>
+        </div>
+        <div id="content">
+            
+        </div>
+        <div id="subFiles">
+            <form method="post" enctype="multipart/form-data" id="fileForm">
+                <input type="file" name="userfile" id="inpFile" accept=".pdf, image/*, .txt" multiple>
+                <input type="button" value="Save" id="saveBtn" onclick="submitfile()">
+            </form>
+        </div>
+    </div>
+
+    <div id="login">
+        <div id="alert">
+            <strong class="items">Error!</strong>
+            <span class="items">Username or Password is not correct.</span>
+        </div> 
+        <div class="container">
+            <div class="gridbox">
+                <img id="logIn" src="images/cloud.png" alt="">
+                <h2>LogIn To: myFiles</h2>
+                <form id="loginForm">
+                    <input id="loginUsername" type="text" name="loginUsername" placeholder="Username">
+                    <input id="loginPassword" type="password" name="loginPassword" placeholder="Password">
+                    <button id="loginBtn" type="button" name="Login" onclick="LogIN()">Log In</button>
+                </form>
+                <button id="signBtn" onclick="redirect()">Sign In</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="signup">
+        <div id="alert1">
+            <strong class="items">Error!</strong>
+            <span class="items">All fields are required.</span>
+        </div>
+        
+        <div id="alert2">
+            <strong class="items">Error!</strong>
+            <span class="items">Email already exists.</span>
+        </div>
+    
+        <div id="alert3">
+            <strong class="items">Error!</strong>
+            <span class="items">Username already exists. Try different one.</span>
+        </div>
+        
+        <div class="container">
+            <div class="gridbox">
+                <img src="images/cloud.png" alt="">
+                <h2 id="signIn">SignIn To: myFiles</h2>
+                <form id="signupForm">
+                    <input type="email" class="signupInput" id="email" name="email" placeholder="Email">
+                    <input type="text" class="signupInput" id="signupUsername" name="username" placeholder="Username">
+                    <input type="password" class="signupInput" id="signupPassword" name="password" placeholder="Password">
+                    <input type="submit" class="signupInput" id="submit" value="Sign In">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/signup.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/otherUtils.js"></script>
+    <script src="javascript/delAccount.js"></script>
+    <script src="javascript/logout.js"></script>
+</body>
+</html>
