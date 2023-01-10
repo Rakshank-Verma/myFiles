@@ -4,12 +4,13 @@ const subBtn = document.getElementById("submit");
 
 subBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    let regex = /\W/g;
     const email = document.getElementById('email').value;
     const username = document.getElementById('signupUsername').value;
     const password = document.getElementById('signupPassword').value;
 
-    if(username.includes("<script>") && password.includes("<script>")){
-        alert("Do not use this tricks here");
+    if(regex.test(username)){
+        alert("Only alphabets, numbers and underscores should be used without any space between them in username.");
     }
     else{
         if (email == "" || username == "" || password == "") {
@@ -70,11 +71,11 @@ subBtn.addEventListener('click', (e) => {
                 }
                 
                 else {
-                    document.body.style.backgroundImage = "../images/bg.png"
+                    // document.body.style.backgroundImage = "../images/bg.png"
                     document.querySelector('title').textContent = "myFiles | Login";
                     document.getElementById("login").style.display = "block";
                     document.getElementById("signup").style.display = "none";
-                    document.body.style.backgroundImage = "url('images/bg2.jpg')";     
+                    // document.body.style.backgroundImage = "url('images/bg2.jpg')";     
                 }
             })
         }

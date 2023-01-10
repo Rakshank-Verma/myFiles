@@ -6,43 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
     <title></title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/signup.css">
 </head>
 <body>
     <div id="main">
         <div id="navbar">
-            <div id="logo">
-                <img id="navImg" src="images/cloud.png" alt="">
+            <span id="username">RakshankVerma</span>
+            <li onclick="logout()">Logout</li>
+            <li onclick="DelAccount()">Delete Account</li>
+            <!-- <li>About</li> -->
+            <img id="mode-chng-icon" src="images/dark-mode.png" onclick="ToggleMode()">
+        </div>
+        <div id="mobile-navbar">
+            <div id="home">
+                <img id="mob-nav-icon" src="images/menu-rounded.png" onclick="openMenu()">
+                <span id="mob-nav-username">RakshankVerma</span>
+                <!-- <img id="mode-chng-icon" src="images/dark-mode.png" onclick="ToggleMode()"> -->
             </div>
-            <div id="menu">
-                <li class="item"><a class="navitem" onclick="logout()">Logout</a></li>
-                <li class="item"><a class="navitem" onclick="DelAccount()">Delete Account</a></li>
-                <!-- <li class="item" id="userAdmin"><a class="navitem" onclick="logout()">Users</a></li> -->
-                <h2 id="username"></h2>
+            <div id="nav-links">
+                <li onclick="DelAccount()">Logout</li>
+                <li onclick="logout()">Delete Account</li>
+                <!-- <li>About</li> -->
             </div>
         </div>
-        <div id="responsive">
-            <div id="hammenu-username">
-                <div id="hamburger" onclick="showMenu()">
-                    <div class="hamB"></div>
-                    <div class="hamB"></div>
-                    <div class="hamB"></div>
-                </div>
-                <div id="usernameInNav">username</div>
-            </div>
-            <div id="Rmenu">
-                <li class="Ritem" id="Logout"><a onclick="logout()">Logout</a></li>
-                <li class="Ritem" id="DelA"><a onclick="DelAccount()">Delete Account</a></li>
-            </div>
-        </div>
-        <div id="content">
+        <div id="container">
             
+        </div>
+        <div id="progress-Bar">
+            <div id="progress">
+                <div id="progress-Content">
+                    <div id="upload-progress"></div>
+                    <div id="totalSize"></div>
+                </div>
+            </div>
         </div>
         <div id="subFiles">
             <form method="post" enctype="multipart/form-data" id="fileForm">
-                <input type="file" name="userfile" id="inpFile" accept=".pdf, image/*, .txt" multiple>
+                <input type="file" name="userfile" id="inpFile" accept=".pdf, image/* " multiple>
                 <input type="button" value="Save" id="saveBtn" onclick="submitfile()">
             </form>
         </div>
@@ -86,7 +88,7 @@
         
         <div class="container">
             <div class="gridbox">
-                <img src="images/cloud.png" alt="">
+                <img id="signupImg" src="images/cloud.png" alt="">
                 <h2 id="signIn">SignIn To: myFiles</h2>
                 <form id="signupForm">
                     <input type="email" class="signupInput" id="email" name="email" placeholder="Email">

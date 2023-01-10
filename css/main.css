@@ -1,187 +1,124 @@
 body {
+    background-color: white;
     margin: 0;
     padding: 0;
-    background-image: url('../images/bg.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
 }
 
 #navbar {
     display: flex;
-}
-
-#logo {
-    width: 75px;
-    height: 50px;
-}
-
-img#navImg {
-    width: 95%;
-    height: 100%;
-    border-radius: 50px;
-}
-
-#menu {
-    border: 2px solid palevioletred;
-    display: flex;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid white;
+    color: white;
+    background-color: #28282B;
+    height: 40px;
     align-items: center;
-    width: 96vw;
-    border-radius: 30px;
-    background-color: #edafc3;
+    font-size: 134%;
+}
+
+#username{
+    margin: 0px 20px 0px 20px;
+    color: red;
+    font-size: 124%;
 }
 
 li {
-    margin: auto 20px;
     list-style: none;
-    width: 15vw;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    display: block;
-    text-align: center;
-    height: auto;
-    font-size: 128%;
-}
-
-a:hover {
+    margin: 0 20px 0 20px;
     cursor: pointer;
     color: white;
-}
-
-h2#username {margin: 0 22px 0 auto;}
-
-#userAdmin{display: none;}
-
-/* Responsive */
-#hammenu-username{
-    display: flex;
-}
-div#usernameInNav{
-    margin: 0;
-    flex-grow: 1;
-    text-align: -webkit-center;
-    font-size: 24px;
-    font-weight: bold;
-}
-#Rmenu {
-    display: none;
-    animation-name: Rmenu;
-    animation-duration: 2.1s;
-    animation-timing-function: ease;
-}
-
-@keyframes Rmenu {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 55px;
-    }
-}
-
-#responsive {
-    display: none;
-    margin: 5px;
-    background-color: palevioletred;
-}
-
-#hamburger {
-    width: 40px;
-    border: 3px solid white;
-    border-radius: 10px;
-    margin-left: 5px;
-    cursor: pointer;
-}
-
-.hamB {
-    height: 1px;
-    width: 25px;
-    margin: 3px auto;
-    border: 1px solid white;
-    background-color: white;
-}
-
-.Ritem {
     text-align: center;
-    margin: 0 auto 10px auto;
-    width: 156px;
-    font-size: 15px;
 }
 
-#Logout,
-#DelA,
-#Users {display: none;}
-
-#content-Container{
-    border: 1px solid black;
-    margin: 5px 0px 5px 0px;
-    border-radius: 5px;
-    opacity: 0.7;
-    background-color: gray;
+li:hover{
+    text-shadow: 0px 0px 4px white;
 }
 
-@media screen and (max-width:700px) {
-    #navbar {display: none;}
-    #responsive {
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#mode-chng-icon{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 auto ; 
+}
+
+#container{
+    margin: 80px 30px 30px 30px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-rows: auto;
+    grid-gap: 100px;
+}
+
+.content{
+    background-color: #fbf0da;
+    box-shadow: 0px 0px 6px 2px grey;
+}
+
+.content-item{
+    display: block;
+    text-align: center;
+    margin: 7px auto;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Download{color: #4ccb51;}
+.Delete{color: red; cursor: pointer;}
+.filename{
+    color: black;
+    margin: 0 7px;
+}
+
+#mobile-navbar{display: none;}
+
+@media only screen and (max-width: 700px) {
+    #navbar{display: none;}
+    #mobile-navbar{
         display: block;
         position: sticky;
-        top: 5px;
-        z-index: 1;
+        top: 0; 
+        height: 40px;
+        background-color: #28282B;
+        border-bottom: 1px solid white;
     }
-    #Rmenu {display: none;}
-    #Logout{display: none;}
-    #DelA{display: none;}
+    #home{
+        display: flex;
+        align-items: center;
+    }
+    #mob-nav-icon{
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+    #mob-nav-username{
+        margin: 0 auto 0 auto;
+        color: red;
+        font-size: 130%;
+    }
+    #mode-chng-icon{
+        margin: 0;
+    }
+    #nav-links{
+        display: none;
+        background-color: #28282B;
+    }
+    #nav-links li{
+        margin-bottom: 4px;
+        font-size: 115%;
+    }
 }
 
-#content {
-    width: 80vw;
-    margin: auto;
-    text-align: center;
-}
-
-#content-container{
-    opacity: 0.7;
-    background-color: black;
-    display: grid;
-    grid-template-columns: minmax(min-content, 1fr) 1fr 1fr 1fr;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 5px 0px 5px 0px;
-}
-
-#filename{color: white;}
-
-a.contitem {
-    margin: 10px 0px 10px 0px;
-    color: black;
-    font-size: 130%;
-    text-decoration: none;
-}
-
-a.delbtn {
+input#inpFile,input#saveBtn{
     cursor: pointer;
-    text-decoration: none;
-    font-size: 130%;
-    margin-top: 13px;
-    color: red;
-}
-
-form.renameform {
-    display: none;
-    margin-top: 12px;
-}
-
-input.newNameBtn {
-    margin-top: 12px;
-    cursor: pointer;
-}
-
-input.newName,input.rename-btn,input#inpFile,input#saveBtn{
-    cursor: pointer;
+    border-radius: 20px;
 }
 
 #subFiles {margin-top: 30px;}
@@ -191,29 +128,17 @@ input.newName,input.rename-btn,input#inpFile,input#saveBtn{
     margin: auto;
 }
 
-#Download {
-    color: green;
-    height: auto;
-    margin: auto;
-}
-
-#Delete {
-    height: auto;
-    margin: auto;
-}
-
-#NewName {
-    height: 43px;
-    margin: auto;
-}
-
 #fileForm{
     margin: auto;
     width: 304px;
     border: 1px solid;
     padding: 5px;
+    border-radius: 20px;
 }
 
+#inpFile::-webkit-file-upload-button{
+    border-radius: 60px;
+}
 
 @media (min-width: 400px) and (max-width: 700px) {
 
@@ -244,8 +169,31 @@ input.newName,input.rename-btn,input#inpFile,input#saveBtn{
     }
 }
 
-@media (min-width: 550px) and (max-width: 700px){
-    body{
-        width: 97vw;
-    }
+#progress-Bar{
+    width: 300px;
+    height: 17px;
+    border: 2px solid black;
+    margin: 10px auto 10px auto;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: antiquewhite;
+    display: none;
+}
+
+#progress-Content{
+    display: flex;
+}
+
+#upload-progress{
+    margin-left: 8px;
+    margin-right: 190px;
+}
+#totalSize{
+    margin-right: 8px;
+}
+#progress{
+    border-radius: 20px;
+    height: 100%;
+    width: 0%;
+    background-color: #ff9800;
 }

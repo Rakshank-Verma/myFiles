@@ -7,7 +7,7 @@ function logout(){
                 document.querySelector('title').textContent = "myFiles | Login";
                 document.getElementById("login").style.display = "block";
                 document.getElementById("main").style.display = "none";
-                document.body.style.backgroundImage = "url('images/bg2.jpg')";
+                // document.body.style.backgroundImage = "url('images/bg2.jpg')";
             }
         })
     }

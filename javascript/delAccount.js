@@ -8,7 +8,7 @@ function DelAccount(){
                 document.querySelector('title').textContent = "myFiles | SignUp";
                 document.getElementById("main").style.display = "none";
                 document.getElementById("signup").style.display = "block";
-                document.body.style.backgroundImage = url('images/bg2.jpg');
+                // document.body.style.backgroundImage = url('images/bg2.jpg');
             }
         }) 
     }
